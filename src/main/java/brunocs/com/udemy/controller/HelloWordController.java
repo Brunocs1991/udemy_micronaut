@@ -1,6 +1,5 @@
 package brunocs.com.udemy.controller;
 
-import brunocs.com.udemy.service.HelloWordService;
 import brunocs.com.udemy.shared.MyService;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
