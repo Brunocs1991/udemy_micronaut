@@ -1,4 +1,4 @@
-package brunocs.com.udemy.hello;
+package brunocs.com.udemy.controller;
 
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.client.HttpClient;
@@ -21,14 +21,14 @@ class HelloWordControllerTest {
     @Test
     void helloWorldEndpointresponseWithTextHelloWorld() {
         var response = httpClient.toBlocking().retrieve("/hello");
-        assertEquals("Hello World", response);
+        assertEquals("Hello from service!", response);
     }
 
         @Test
     void helloWorldEndpointresponseWithStatusCode200() {
         var response = httpClient.toBlocking().exchange("/hello", String.class);
        assertEquals(HttpStatus.OK, response.getStatus());
-       assertEquals(Optional.of("Hello World"), response.getBody());
+       assertEquals(Optional.of("Hello from service!"), response.getBody());
     }
 
 
